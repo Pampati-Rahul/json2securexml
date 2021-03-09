@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  decrypt:
+    build:
+      context: /root/dec
+    depends_on:
+    - encrypt
+    volumes:
+    - /root/tcomp:/usr/src/app:rw
+  encrypt:
+    build:
+      context: /root/enc
+    volumes:
+    - /root/tcomp:/usr/src/app:rw
