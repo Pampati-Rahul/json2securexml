@@ -69,9 +69,9 @@ def main():
     parse = argparse.ArgumentParser(description="Provided the json file and get "
                                                 "encrypted xml file")
     parse.add_argument("file", help="Mandatory to provide File to encrypt/decrypt")
-    parse.add_argument("-genrate", dest="generate_key", action="store_true",
+    parse.add_argument("--genrate", dest="generate_key", action="store_true",
                        help="generate a new key, used for encryption")
-    parse.add_argument("-encrypt", dest="encrypt", action="store_true",
+    parse.add_argument("--encrypt", dest="encrypt", action="store_true",
                        help="encrypt the file.")
 
     args = parse.parse_args()
