@@ -7,10 +7,10 @@ services:
     depends_on:
     - encrypt
     volumes:
-    - ~/json2securexml-main/assignment/:/usr/src/app:rw
+    - ~/json2securexml-main/:/usr/src/app:rw
   encrypt:
     command: ["encrypt.py", "sample.json", "--genrate", "--encrypt"] 
     build:
       context: ~/json2securexml-main/
     volumes:
-    - ~/json2securexml-main/assignment/:/usr/src/app:rw
+    - ~/json2securexml-main/:/usr/src/app:rw
