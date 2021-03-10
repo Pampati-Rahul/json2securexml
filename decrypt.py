@@ -27,7 +27,7 @@ def main():
     parse = argparse.ArgumentParser(description="Provided the encrypted xml file and get "
                                                 "decrypted xml file")
     parse.add_argument("file", help="Mandatory to provide File to encrypt/decrypt")
-    parse.add_argument("-decrypt", dest="decrypt", action="store_true",
+    parse.add_argument("--decrypt", dest="decrypt", action="store_true",
                        help="decrypt the file")
 
     args = parse.parse_args()
